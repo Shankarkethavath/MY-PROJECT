@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Akkara website design using HTML and CSS</title>
+   <link rel="stylesheet" href="styles.css">
+   <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/img.nitt.logo.png">
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="https://nitt.wiki/index.php?title=Akkara&mobileaction=toggle_view_desktop">HOME</a></li>
+                    <li><a href="https://nitt.wiki/index.php?title=Akkara&mobileaction=toggle_view_desktop#About_the_Club">ABOUT</a></li>
+                    <li><a href="https://nitt.wiki/index.php?title=Akkara&mobileaction=toggle_view_desktop#Events">EVENTS</a></li>
+                    <li><a href="https://nitt.wiki/index.php?title=Akkara&mobileaction=toggle_view_desktop#Social_Media_Handles">HISTORY</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/img.akkara.png" class="clublogo">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/img.farming.png">
+                    <div>
+                        <h1>Farming</h1>
+                        <p><a href="https://www.tractorjunction.com/blog/types-of-farming-in-india-procedure-benefits-and-role/"><u>Types of farming in India</u></a></p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="images/img.tractor.png">
+                    <div>
+                        <h1>Technology</h1>
+                        <p><a href="https://khetibuddy.com/new-technology-in-agriculture/"><u>Modern technnology for Farming</u></a></p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="images/img.education.png">
+                    <div>
+                        <h1>Education</h1>
+                        <p><a href="http://12.000.scripts.mit.edu/mission2014/solutions/farmer-education-agricultural-extension"><u>Farmer education</u></a></p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="images/img.marketing.png">
+                    <div>
+                        <h1>Marketing</h1>
+                        <p><a href="http://megagriculture.gov.in/public/marketing_agri_marketing.aspx"><u>Agricluture marketing in India</u></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/img.arrowup.png" id="upbotton">
+            <h3>Features</h3>
+            <img src="images/img.arrowdown.png" id="downbotton">
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upbotton= document.getElementById("upbotton");
+        var downbotton= document.getElementById("downbotton");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbotton.onclick= function()
+        {
+            rotateSum=rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue= rotateSum;
+        }
+        downbotton.onclick= function()
+        {
+            rotateSum=rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue= rotateSum;
+        }
+
+    </script>
+</body>
+
+</html>
